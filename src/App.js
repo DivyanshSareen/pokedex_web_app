@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
+import { SearchPage, ListingPage, DetailsPage, BookmarksPage } from "./routes/index.js";
+import { NavBar } from "./components/index.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NavBar/>
+     <Routes>
+      <Route path="/search" element={<SearchPage/>}></Route>
+      <Route path="/listing" element={<ListingPage/>}></Route>
+      <Route path="/details" element={<DetailsPage/>}></Route>
+      <Route path="/bookmarks" element={<BookmarksPage/>}></Route>
+     </Routes>
+     <Button>Hello</Button>
     </div>
   );
 }
