@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
     <div>
-      Get Started!{' '}
+      Get Started!
       <Link to="search">
         <Button variant="outline">Search</Button>
-      </Link>{' '}
+      </Link>
       here.
     </div>
   );

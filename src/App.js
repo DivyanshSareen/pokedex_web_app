@@ -10,7 +10,15 @@ import { NavBar } from './components/index.js';
 
 function App() {
   return (
-    <div className="App" style={{ background: '#DC0A2D', minHeight: '100vh' }}>
+    <div
+      className="App"
+      style={{
+        background: '#DC0A2D',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <NavBar />
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>

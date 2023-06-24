@@ -1,5 +1,7 @@
+import { ItemGrid } from '../components/';
+
 const SearchPage = () => {
-  return <div>Search Page</div>;
+  return <ItemGrid></ItemGrid>;
 };
 
 export default SearchPage;
