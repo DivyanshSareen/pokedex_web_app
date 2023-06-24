@@ -1,5 +1,7 @@
+import { ItemDetails } from '../components';
+
 const DetailsPage = () => {
-  return <div>Details Page</div>;
+  return <ItemDetails></ItemDetails>;
 };
 
 export default DetailsPage;
