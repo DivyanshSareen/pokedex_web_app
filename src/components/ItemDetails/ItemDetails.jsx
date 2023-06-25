@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Image from 'mui-image';
 import TypeChip from '../TypeChip/TypeChip';
+import ItemAbout from './ItemAbout';
 
 const ItemDetails = () => {
   return (
@@ -15,22 +16,33 @@ const ItemDetails = () => {
         boxShadow: 'inset 0 0 8px #666666',
         position: 'relative',
         marginTop: '30%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
       }}
     >
-      <Image
-        position="absolute"
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+      <Box
         sx={{
-          zIndex: '1',
-          translate: '0 -10%',
-          maxHeight: '270px',
-          maxWidth: '270px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1em',
         }}
-      />
-      <TypeChip type={'fire'} sx={{ marginTop: '60px' }} />
+      >
+        <Image
+          position="absolute"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+          sx={{
+            zIndex: '1',
+            translate: '0 -10%',
+            maxHeight: '270px',
+            maxWidth: '270px',
+          }}
+        />
+
+        <TypeChip
+          type={'fire'}
+          sx={{ marginTop: '60px', width: 'max-content' }}
+        />
+        <ItemAbout />
+      </Box>
     </Box>
   );
 };
